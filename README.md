@@ -25,6 +25,14 @@ my-react-app/
   ├── README.md
   └── ...
 ```
+ou utiliser Vite 
+```
+npm install -g create-vite
+create-vite mon-projet
+cd mon-projet
+npm install
+npm run dev
+```
 
 # Comment installer le routeur:
 ```
