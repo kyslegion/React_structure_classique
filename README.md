@@ -36,7 +36,7 @@ npm run dev
 # Gérer les erreurs de routes 
 
 dans src/error-page.jsx
-
+```
 import { useRouteError } from "react-router-dom";
 
 export default function ErrorPage() {
@@ -53,9 +53,10 @@ export default function ErrorPage() {
     </div>
   );
 }
+```
 
 dans src/main.jsx
-
+```
 /* previous imports */
 import ErrorPage from "./error-page";
 
@@ -72,6 +73,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
+
+```
+
+
 
 
 # Faire un Routeur
