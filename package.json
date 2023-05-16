@@ -1,0 +1,26 @@
+{
+  "name": "react_structure_classique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyslegion/React_structure_classique.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyslegion/React_structure_classique/issues"
+  },
+  "homepage": "https://github.com/kyslegion/React_structure_classique#readme",
+  "dependencies": {
+    "react-router-dom": "^6.11.1"
+  }
+}
