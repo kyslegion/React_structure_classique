@@ -1,5 +1,5 @@
 #Comment doit être la structuration du dossier:
-
+```
 my-react-app/
   ├── public/
   │   ├── index.html
@@ -24,13 +24,16 @@ my-react-app/
   ├── package.json
   ├── README.md
   └── ...
-
+```
 
 #Comment installer le routeur:
+```
 npm install react-router-dom
 yarn add react-router-dom
+```
 
 #Dans votre fichier App.js:
+```
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
@@ -48,8 +51,9 @@ function App() {
 }
 
 export default App;
-
+```
 #Créer des composants de page dans le dossier pages/ 
+```
 import React from 'react';
 
 function Home() {
@@ -57,8 +61,9 @@ function Home() {
 }
 
 export default Home;
-
+```
 #Faire des liens de navigation entre les pages (Routeur) avec Link dans components/Header.js
+```
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -78,3 +83,4 @@ function Header() {
 }
 
 export default Header;
+```
