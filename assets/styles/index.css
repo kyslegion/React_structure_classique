@@ -380,3 +380,54 @@ i {
   justify-content: center;
   width: 100%;
 }
+
+
+
+
+
+#root {
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-wrap: wrap !important;
+}
+#sidebar {
+	width: 100%;
+	background-color: #f7f7f7;
+	border-right: solid 1px #e3e3e3;
+	display: flex;
+	flex-direction: column;
+}
+#detail {
+	flex: unset;
+	padding: unset;
+	width: unset;
+}
+.livre{
+  width: 3vw;
+}
+.container{
+  /* width: 15vw; */
+  width: 3vw;
+}
+
+
+.Catalogue {
+	display: flex;
+	flex-wrap: wrap;
+	/* display: grid; */
+	/* grid-template-columns: 1fr 1fr 1fr; */
+	gap: -1em;
+}
+#detail {
+	flex: 1;
+	/* padding: 2rem 4rem; */
+	width: 100%;
+}
+.container {
+	/* width: 15vw; */
+	width: 38vw;
+}
+.livre {
+	width: 33vw;
+}

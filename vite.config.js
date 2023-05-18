@@ -2,6 +2,16 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
+// export default defineConfig({
+//   plugins: [react()],
+// })
 export default defineConfig({
   plugins: [react()],
+  server:{
+    proxy:{
+      '/livre':'http://localhost:4000',
+      '/auteurs':'http://localhost:4000'
+    }
+  }
+
 })

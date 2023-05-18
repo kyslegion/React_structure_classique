@@ -5,7 +5,7 @@ const sequelize = new Sequelize('database', 'username', 'password', {
   storage: './database.db'
 });
 
-const Livre = sequelize.define('Livre', {
+const Livres = sequelize.define('Livres', {
   ID: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -73,5 +73,38 @@ const Livre = sequelize.define('Livre', {
   tableName: 'Livres',
   timestamps: false
 });
-
-export default Livre;
+const Auteurs = sequelize.define('Auteurs', {
+  ID: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true,
+  },
+  PrenomNom: {
+    type: DataTypes.STRING(255),
+    allowNull: false,
+  },
+  Photo: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+  Presentation: {
+    type: DataTypes.STRING(10000),
+    allowNull: true,
+  },
+  Participations: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+  Reseaux: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+  LivresFavoris: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
+}, {
+  tableName: 'Auteurs', // Nom de la table dans la base de données
+  timestamps: false, // Désactiver les timestamps par défaut (created_at, updated_at)
+});
+export { Livres, Auteurs };

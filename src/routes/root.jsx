@@ -31,19 +31,19 @@ export default function Root() {
         <nav>
           <ul>
             <li>
-            <Link to={`/auteurs`}>auteurs</Link>
+            <Link to={`/auteurs`}>Auteurs</Link>
             </li>
             <li>
-            <Link to={`/catalogue`}>catalogue</Link>
+            <Link to={`/catalogue`}>Catalogue</Link>
             </li>
             <li>
             <Link to={`/contact2`}>contact2</Link>
             </li>
             <li>
-            <Link to={`/faq`}>faq</Link>
+            <Link to={`/faq`}>Faq</Link>
             </li>
             <li>
-            <Link to={`/presentation`}>presentation</Link>
+            <Link to={`/presentation`}>Presentation</Link>
             </li>
           </ul>
         </nav>
