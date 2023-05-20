@@ -225,3 +225,13 @@ export default function Catalogue() {
     {data.map(item => ...} : Dans le JSX, nous utilisons data.map pour parcourir chaque objet de data et générer un élément <div> pour chaque objet. La méthode .map crée un nouveau tableau avec les éléments générés. En utilisant {} dans le JSX, nous pouvons inclure des expressions JavaScript pour générer du contenu dynamique. Dans ce cas, nous affichons la valeur de la propriété Nom de chaque objet dans un élément <div>.
 
 En résumé, le code utilise fetch pour récupérer les données du serveur, les stocke dans un état data, puis utilise data.map pour générer des éléments JSX pour chaque objet dans le tableau data, affichant ainsi les données dans le HTML.
+
+
+### Créer une route dynamique par rapport a un element de base de données
+app.get('/livre/:nom', (req, res) => {
+  const nom = req.params.nom;
+  // Utilisez le nom capturé pour effectuer une recherche dans votre base de données
+  // et renvoyez les données correspondantes au format JSON
+  // par exemple : const livre = db.collection('livres').findOne({ nom: nom });
+  // res.json(livre);
+});

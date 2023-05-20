@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Auteurs() {
   const [data, setData] = useState([]);
@@ -22,12 +23,15 @@ export default function Auteurs() {
 
   return (
     <div className='Catalogue'>
-      {data.map((item, index) => (
-        <div key={index} className='container'>
-          <img className='livre' src={`../../assets/images/Auteurs/${item.Photo}`} alt="Description de l'image" />
-          <span>{item.PrenomNom}</span>
+      {data.map((item) => (
+        <div key={item.ID} className='container'>
+          <Link to={`/auteur/${item.ID}`}>
+            <img className='livre' src={`../../assets/images/Auteurs/${item.Photo}`} alt="Description de l'image" />
+            <span>{item.PrenomNom}</span>
+          </Link>
         </div>
       ))}
     </div>
   );
+  
 }

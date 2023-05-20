@@ -13,6 +13,10 @@ import Faq from "./routes/faq";
 import Presentation from "./routes/presentation";
 
 
+//Composant
+import AuteurDetail from './components/AuteurDetail';
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -38,6 +42,10 @@ const router = createBrowserRouter([
       {
         path: "/presentation",
         element: <Presentation />,
+      },
+      {
+        path: "/auteur/:ID",
+        element: <AuteurDetail />,
       },
     ],
     

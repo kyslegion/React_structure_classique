@@ -18,6 +18,28 @@ app.get('/livre', (req, res) => {
       res.status(500).json({ message: 'Erreur lors de la récupération des éléments.' });
     });
 });
+app.get('/auteur/:ID', (req, res) => {
+  const id = req.params.ID; // Utilisez "ID" au lieu de "id"
+
+  Auteurs.findByPk(id)
+    .then(auteur => {
+      if (auteur) {
+        const auteurObjet = auteur.toJSON();
+        console.log(auteurObjet);
+        res.json(auteurObjet); // Envoie les données de l'auteur au format JSON en réponse à la requête
+      } else {
+        res.status(404).json({ message: 'Auteur non trouvé.' });
+      }
+    })
+    .catch(err => {
+      console.error('Erreur lors de la récupération de l\'auteur :', err);
+      res.status(500).json({ message: 'Erreur lors de la récupération de l\'auteur.' });
+    });
+});
+
+
+
+
 app.get('/auteurs', (req, res) => {
   Auteurs.findAll()
     .then(auteurs => {

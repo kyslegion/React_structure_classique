@@ -10,7 +10,8 @@ export default defineConfig({
   server:{
     proxy:{
       '/livre':'http://localhost:4000',
-      '/auteurs':'http://localhost:4000'
+      '/auteurs':'http://localhost:4000',
+      '/auteur/:ID':'http://localhost:4000',
     }
   }
 
